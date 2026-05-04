@@ -83,7 +83,7 @@ jobs:
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
-      run: msbuild UnityModManager.sln /t:Restore /p:Configuration=Release /p:Platform="Any CPU"
+      run: nuget restore UnityModManager.sln
       env:
         Configuration: ${{ matrix.configuration }}
 
